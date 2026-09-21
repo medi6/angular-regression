@@ -17,6 +17,9 @@ for V in $VERSIONS; do
     echo "{\"version\":\"$V\",\"erreur\":\"installation impossible\"}"
     continue
   fi
-  cp repro.mjs "$D/repro.mjs"
-  (cd "$D" && node repro.mjs)
+  for S in repro-vue.mjs repro-effect.mjs controle-ordre-lecture.mjs; do
+    cp "$S" "$D/$S"
+  done
+  echo "=== Angular $V ==="
+  (cd "$D" && node repro-vue.mjs && node repro-effect.mjs && node controle-ordre-lecture.mjs)
 done
