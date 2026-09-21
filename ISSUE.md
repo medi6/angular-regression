@@ -83,7 +83,7 @@ for a view, is the normal case.
 
 **Please provide a link to a minimal reproduction of the bug**
 
-<!-- lien du depot une fois pousse -->
+https://github.com/medi6/angular-regression.git
 
 `repro-vue.mjs` (view-shaped consumer) and `repro-effect.mjs` (effect writing a
 signal). No DOM, no browser, no test runner — only
